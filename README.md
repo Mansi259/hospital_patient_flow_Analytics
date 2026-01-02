@@ -112,7 +112,7 @@ The **Gold layer** data in Synapse follows a **star schema** for optimized analy
 
 ### **2. Data Simulation**
 - Developed **Python script** `patient_flow_generator.py` to stream fake patient data (departments, wait time, discharge status) to Event Hub.
-- [Producer Code](simulator/patient_flow_generator.py)
+- [Producer Code]
 
 ---
 
@@ -123,22 +123,22 @@ The **Gold layer** data in Synapse follows a **star schema** for optimized analy
 ---
 
 ### **4. Databricks Processing**
-- [**Notebook 1**](databricks-notebooks/01_bronze_rawdata.py): Reads Event Hub stream into Bronze.
-- [**Notebook 2**](databricks-notebooks/02_silver_cleandata.py): Cleans and validates schema.
-- [**Notebook 3** ](databricks-notebooks/03_gold_transform.py): Aggregates and prepares star schema tables.
+- [**Notebook 1**]: Reads Event Hub stream into Bronze.
+- [**Notebook 2**]: Cleans and validates schema.
+- [**Notebook 3** ]: Aggregates and prepares star schema tables.
 
 ---
 
 ### **5. Synapse SQL Pool**
 - Created **dedicated SQL Pool**.
 - Executed schema and fact/dimension creation queries from:
-  - [DDL_Qureis](sqlpool-quries/SQL_pool_quries.sql)
+  - [DDL_Qureis]
 
 ---
 
 ### **6. Version Control**
 - Version control with **Git**:
-  - [Commands reference](git_commands/git_bash)
+  - [Commands reference]
 
 ---
 

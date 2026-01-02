@@ -12,26 +12,26 @@
 ---
 
 ## 📑 Table of Contents
-- [📌 Project Overview](#-project-overview)
-- [🎯 Objectives](#-objectives)
-- [📂 Project Structure](#-project-structure)
-- [🛠️ Tools & Technologies](#️-tools--technologies)
-- [📐 Data Architecture](#-data-architecture)
-- [⭐ Star Schema Design](#-star-schema-design)
-- [⚙️ Step-by-Step Implementation](#️-step-by-step-implementation)
+- [ Project Overview](#-project-overview)
+- [ Objectives](#-objectives)
+- [ Project Structure](#-project-structure)
+- [ Tools & Technologies](#️-tools--technologies)
+- [ Data Architecture](#-data-architecture)
+- [ Star Schema Design](#-star-schema-design)
+- [ Step-by-Step Implementation](#️-step-by-step-implementation)
   - [1. Event Hub Setup](#1-event-hub-setup)
   - [2. Data Simulation](#2-data-simulation)
   - [3. Storage Setup](#3-storage-setup)
   - [4. Databricks Processing](#4-databricks-processing)
   - [5. Synapse SQL Pool](#5-synapse-sql-pool)
   - [6. Version Control](#6-version-control)
-- [📊 Data Analytics](#-data-analytics)
-- [✅ Key Outcomes](#-key-outcomes)
-- [📜 License](#-license)
+- [ Data Analytics](#-data-analytics)
+- [ Key Outcomes](#-key-outcomes)
+- [ License](#-license)
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 This project demonstrates a **real-time data engineering pipeline** for healthcare, designed to analyze **patient flow across hospital departments** using Azure cloud services.  
 The pipeline ingests streaming data, processes it in **Databricks (PySpark)**, and stores it in **Azure Synapse SQL Pool** for analytics and visualization.
 
@@ -47,7 +47,7 @@ The pipeline ingests streaming data, processes it in **Databricks (PySpark)**, a
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 - Collect real-time patient data via **Azure Event Hub**.
 - Process and cleanse data using **Databricks** (Bronze → Silver → Gold layers).
 - Implement a **star schema** in **Synapse SQL Pool** for efficient querying.
@@ -55,7 +55,7 @@ The pipeline ingests streaming data, processes it in **Databricks (PySpark)**, a
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 ```plaintext
 real-time-patient-flow-azure/
 │
@@ -73,7 +73,7 @@ real-time-patient-flow-azure/
 
 ---
 
-## 🛠️ Tools & Technologies
+##  Tools & Technologies
 - **Azure Event Hub** – Real-time data ingestion
 - **Azure Databricks** – PySpark-based ETL processing
 - **Azure Data Lake Storage** – Staging raw and curated data
@@ -84,7 +84,7 @@ real-time-patient-flow-azure/
 
 ---
 
-## 📐 Data Architecture
+##  Data Architecture
 The pipeline follows a **multi-layered architecture**:
 - **Bronze Layer**: Raw JSON data from Event Hub stored in ADLS.
 - **Silver Layer**: Cleaned and structured data (validated types, null handling).
@@ -92,7 +92,7 @@ The pipeline follows a **multi-layered architecture**:
 
 ---
 
-## ⭐ Star Schema Design
+##  Star Schema Design
 The **Gold layer** data in Synapse follows a **star schema** for optimized analytics:
 - **Fact Table**: `FactPatientFlow` (patient visits, timestamps, wait times, discharge)
 - **Dimension Tables**:
@@ -102,7 +102,7 @@ The **Gold layer** data in Synapse follows a **star schema** for optimized analy
 
 ---
 
-## ⚙️ Step-by-Step Implementation
+##  Step-by-Step Implementation
 
 ### **1. Event Hub Setup**
 - Created **Event Hub namespace** and **patient-flow hub**.
@@ -142,16 +142,16 @@ The **Gold layer** data in Synapse follows a **star schema** for optimized analy
 
 ---
 
-## 📊 Data Analytics
+##  Data Analytics
 
 Once the **data pipeline** was established and a **Star Schema** implemented in Synapse SQL Pool, the next step was to build an **interactive dashboard in Power BI**.  
 
-### **🔗 Synapse → Power BI Connection**
+### ** Synapse → Power BI Connection**
 - Connected **Azure Synapse SQL Pool** to Power BI using a direct SQL connection.  
 - Imported **FactPatientFlow** and **Dimension tables**.  
 - Established relationships for **Star Schema-based reporting**.  
 
-### **📈 Dashboard Features**
+### ** Dashboard Features**
 The **Healthcare Patient Flow Dashboard** provides insights into:  
 - **Bed Occupancy Rate** by department and gender.  
 - **Patient Flow Trends** (admissions, wait times).  
@@ -162,7 +162,7 @@ The **Healthcare Patient Flow Dashboard** provides insights into:
 
 ---
 
-## ✅ Key Outcomes
+##  Key Outcomes
 - **End-to-End Pipeline:** From **real-time ingestion → transformation → warehouse → analytics**.  
 - **Scalable Architecture:** Easily adaptable for different hospital datasets.  
 - **Business Insights:** Hospital admins can monitor **bed usage, patient flow, and department efficiency** in real time.  
@@ -170,7 +170,7 @@ The **Healthcare Patient Flow Dashboard** provides insights into:
 
 ---
 
-## 📜 License
+##  License
 This project is licensed under the **MIT License**.  
 Feel free to use and adapt for learning or production.
 

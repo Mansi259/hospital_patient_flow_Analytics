@@ -112,7 +112,7 @@ The **Gold layer** data in Synapse follows a **star schema** for optimized analy
 
 ### **2. Data Simulation**
 - Developed **Python script** `patient_flow_generator.py` to stream fake patient data (departments, wait time, discharge status) to Event Hub.
-- [Producer Code]
+  
 
 ---
 
@@ -132,13 +132,13 @@ The **Gold layer** data in Synapse follows a **star schema** for optimized analy
 ### **5. Synapse SQL Pool**
 - Created **dedicated SQL Pool**.
 - Executed schema and fact/dimension creation queries from:
-  - [DDL_Qureis]
+  
 
 ---
 
 ### **6. Version Control**
 - Version control with **Git**:
-  - [Commands reference]
+  
 
 ---
 
